@@ -104,7 +104,8 @@ class PostController {
    */
   async destroy({ params, request, response }) {
     const post = await Post.find(params.id);
-    await post.delete;
+    await post.delete();
+    return "Deleted";
   }
 }
 
